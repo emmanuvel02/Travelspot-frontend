@@ -47,7 +47,6 @@ export default function Destinations() {
               <div 
                 key={destination.id} 
                 className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer w-full flex flex-col h-full"
-                onClick={() => navigate('/booking', { state: { destination } })}
               >
                 <div className="p-4 flex-grow">
                   <Swiper
@@ -87,7 +86,9 @@ export default function Destinations() {
                     </ul>
                   </div>
                 </div>
-                <div className="p-4 border-t border-gray-200 bg-gray-50">
+                <div className="p-4 border-t border-gray-200 bg-gray-50" 
+                onClick={() => navigate('/booking', { state: { destination } })}
+                >
                   <div className="flex justify-between items-center">
                     <div className="flex items-center text-red-600 text-lg">
                       <FaClock className="mr-2 text-green-500" />
